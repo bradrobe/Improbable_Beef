@@ -9,15 +9,16 @@ console.log(sortedCities);
 
 
 //Select only the top five cities in terms of growth.
-var topFiveCities = sortedCities.slice(0,5);
+//var topFiveCities = sortedCities.slice(0,5);
+var topFiveCities = sortedCities.slice(0,7);
 
 console.log(topFiveCities);
 
 // The parseInt converts strings into integers.
-var topFiveCityNames = cityGrowths.map(city => city.City);
+var topFiveCityNames = topFiveCities.map(city => city.City);
 
 
-var topFiveCityGrowths = cityGrowths.map(city => parseInt(city.Increase_from_2016));
+var topFiveCityGrowths = topFiveCities.map(city => parseInt(city.Increase_from_2016));
 
 console.log(topFiveCityNames)
 console.log(topFiveCityGrowths)
